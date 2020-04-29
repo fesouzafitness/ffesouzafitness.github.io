@@ -228,18 +228,18 @@
 
 .projects-section .project-text {
   padding: 3rem;
-  font-size: 90%;
 }
 
 @media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
   .projects-section .project-text hr {
     border-color: #B1CC16;
     border-width: .25rem;
     width: 30%;
   }
+}
+
+.projects-section .servico {
+  font: 1.5rem;
 }
 
 .projects-section .servico img {
@@ -257,6 +257,11 @@
 }
 
 @media (min-width: 992px) {
+  .sobre img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 400px;
+  }
   .servico {
     overflow: hidden;
     max-height: 500px;
@@ -360,4 +365,8 @@ a:focus, a:hover {
 
 footer {
   padding: 5rem 0;
+}
+
+.color-primary {
+  color: #B1CC16;
 }

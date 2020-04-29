@@ -9,9 +9,7 @@
   }
   .project-text {
     padding: 3rem;
-    font-size: 90%;
     @media (min-width: 992px) {
-      padding: 5rem;
       hr {
         border-color: $primary;
         border-width: .25rem;
@@ -19,8 +17,8 @@
       }
     }
   }
-
   .servico {
+    font: 1.5rem;
     img {
       filter: grayscale(100%);
     }
@@ -35,6 +33,12 @@
   }
 }
 @media(min-width: 992px) {
+  .sobre {
+    img {
+      object-fit: cover;
+      height: 400px;
+    }
+  }
   .servico {
     overflow: hidden;
     max-height: 500px;
