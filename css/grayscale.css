@@ -27,15 +27,32 @@
   padding: .9rem 0;
 }
 
+#mainNav .navbar-nav .nav-item a {
+  color: #fff;
+}
+
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
   outline: none;
   background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:hover a {
+  color: #B1CC16;
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
   background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active a, #mainNav .navbar-nav .nav-item:focus a {
+  color: #B1CC16;
+}
+
+@media (max-width: 991px) {
+  #mainNav .navbar-nav .nav-item:not(:last-of-type) {
+    border-bottom: 1px solid #353334;
+  }
 }
 
 @media (min-width: 992px) {
@@ -165,7 +182,6 @@
 }
 
 .about-section {
-  padding-top: 10rem;
   background: #161616;
   height: 700px;
 }
@@ -206,9 +222,27 @@
   font-style: italic;
 }
 
+@media (max-width: 767px) {
+  .about-section .carousel .blockquote p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-section .carousel .blockquote p {
+    font-size: 3vw;
+  }
+}
+
 .about-section .carousel .blockquote .blockquote-footer {
   color: #B1CC16;
   padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    padding-top: 10rem;
+  }
 }
 
 .projects-section {
@@ -217,6 +251,7 @@
 
 .projects-section .featured-text {
   padding: 2rem;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
@@ -247,16 +282,30 @@
   filter: grayscale(100%);
 }
 
-.projects-section .servico:hover h4 {
+.projects-section .servico:active h4, .projects-section .servico:hover h4 {
   color: #B1CC16 !important;
 }
 
-.projects-section .servico:hover img {
+.projects-section .servico:active img, .projects-section .servico:hover img {
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .projects-section .featured-text {
+    text-align: justify;
+  }
+  .servico img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 566px;
+  }
+}
+
 @media (min-width: 992px) {
+  .projects-section .featured-text {
+    text-align: justify;
+  }
   .sobre img {
     -o-object-fit: cover;
     object-fit: cover;
@@ -265,6 +314,11 @@
   .servico {
     overflow: hidden;
     max-height: 500px;
+  }
+  .servico img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
   }
 }
 

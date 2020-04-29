@@ -1,5 +1,4 @@
 .about-section {
-  padding-top: 10rem;
   background: $black;
   height: 700px;
   p {
@@ -26,6 +25,12 @@
         vertical-align: -0.4em;
       }
       p {
+        @media(max-width: 767px) {
+          font-size: 2vw;
+        }
+        @media(max-width: 575px) {
+          font-size: 3vw;
+        }
         margin-bottom: 1rem;
         font-weight: lighter;
         font-style: italic;
@@ -35,5 +40,10 @@
         padding: 0;
       }
     }
+  }
+}
+@media(min-width: 1200px) {
+  .about-section {
+    padding-top: 10rem;
   }
 }

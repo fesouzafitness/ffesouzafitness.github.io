@@ -17,15 +17,28 @@
   }
   .navbar-nav {
     .nav-item {
+      a {
+        color: $white;
+      }
       &:hover {
-        color: fade(white, 80%);
+        a { color: $primary; }
         outline: none;
         background-color: transparent;
       }
       &:active,
       &:focus {
+        a { color: $primary; }
         outline: none;
         background-color: transparent;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .navbar-nav {
+      .nav-item {
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #353334;
+        }
       }
     }
   }

@@ -2,6 +2,7 @@
   padding: 10rem 0;
   .featured-text {
     padding: 2rem;
+    text-align: center;
     @media (min-width: 992px) {
       padding: 0 0 0 2rem;
       border-left: 0.5rem solid $primary;
@@ -22,6 +23,7 @@
     img {
       filter: grayscale(100%);
     }
+    &:active,
     &:hover {
       h4 {
         color: $primary !important;
@@ -32,7 +34,25 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .projects-section {
+    .featured-text {
+      text-align: justify;
+    }
+  }
+  .servico {
+    img {
+      object-fit: cover;
+      height: 566px;
+    }
+  }
+}
 @media(min-width: 992px) {
+  .projects-section {
+    .featured-text {
+      text-align: justify;
+    }
+  }
   .sobre {
     img {
       object-fit: cover;
@@ -42,5 +62,9 @@
   .servico {
     overflow: hidden;
     max-height: 500px;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
   }
 }
