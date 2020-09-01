@@ -13,3 +13,6 @@ $gray-900: #212529 !default;
 $black: #161616 !default;
 
 $primary: #B1CC16 !default;
+//$primary-lighten: #C2D557 !default;
+$primary-lighten: lighten($primary, 20%) !default;
+$primary-darken: darken($primary, 30%) !default;

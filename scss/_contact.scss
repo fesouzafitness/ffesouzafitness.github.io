@@ -1,17 +1,30 @@
 .contact-section {
   padding: 5rem 0;
-  background: linear-gradient(to bottom, #{fade-out($black, .3)} 0%,#{fade-out($black, .3)} 75%,$black 100%), url('../img/bg-footer.jpg');
+  background: linear-gradient(to bottom, #{fade-out($black, 0.3)} 0%, #{fade-out($black, 0.3)} 75%, $black 100%),
+    url("../img/bg-footer.jpg");
   background-position: 0% 35%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   .row {
+    a {
+      color: inherit;
+    }
     .card {
       border: 0;
       border-bottom: 0.25rem solid $primary;
+      &:hover {
+        background-image: linear-gradient($primary-lighten, $primary);
+        hr {
+          border-color: $primary-darken;
+        }
+        * {
+          color: $primary-darken !important;
+        }
+      }
       h4 {
         font-size: 0.8rem;
-        font-family: 'Varela Round';
+        font-family: "Varela Round";
         text-transform: uppercase;
         letter-spacing: 0.15rem;
       }
@@ -19,6 +32,9 @@
         border-color: $primary;
         border-width: 0.25rem;
         width: 3rem;
+      }
+      label {
+        color: $primary
       }
     }
   }

@@ -351,14 +351,30 @@
   background-size: cover;
 }
 
+.contact-section .row a {
+  color: inherit;
+}
+
 .contact-section .row .card {
   border: 0;
   border-bottom: 0.25rem solid #B1CC16;
 }
 
+.contact-section .row .card:hover {
+  background-image: linear-gradient(#d8ed5b, #B1CC16);
+}
+
+.contact-section .row .card:hover hr {
+  border-color: #394207;
+}
+
+.contact-section .row .card:hover * {
+  color: #394207 !important;
+}
+
 .contact-section .row .card h4 {
   font-size: 0.8rem;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -367,6 +383,10 @@
   border-color: #B1CC16;
   border-width: 0.25rem;
   width: 3rem;
+}
+
+.contact-section .row .card label {
+  color: #B1CC16;
 }
 
 .contact-section .social {
